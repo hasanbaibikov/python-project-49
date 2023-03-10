@@ -17,6 +17,7 @@ brain-progression = "brain_games.scripts.brain_progression:main"
 python = "^3.8"
 prompt = "^0.4.1"
 flake8 = { version = '^6.0.0', python = '^3.8.1' }
+sympy = "^1.11.1"
 
 [tool.poetry.group.dev.dependencies]
 flake8 = "^6.0.0"
