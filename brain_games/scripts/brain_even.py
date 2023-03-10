@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 from brain_games.games.even_games import even_play
 
 
