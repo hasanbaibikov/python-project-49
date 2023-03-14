@@ -14,10 +14,10 @@ def prime_play():
     while count < 3:
         num = random.randint(1, 100)
         print(f'Question: {num}')
-        correct_answer = dict[is_prime(num)]
+        crt = dict[is_prime(num)]
         answer = prompt.string('Your answer: ')
-        if correct_answer != answer:
-            print(f'"{answer}" is wrong answer ;(. Correct answer was "{correct_answer}".')
+        if crt != answer:
+            print(f'"{answer}" is wrong answer ;(. Correct answer was "{crt}".')
             print(f'''Let's try again, {name}!''')
             break
         else:

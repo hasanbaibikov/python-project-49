@@ -18,14 +18,14 @@ def calc_play():
         operators = ['+', '-', '*']
         random_operators = choice(operators)
         calc = f'{operand1} {random_operators} {operand2}'
-        some_dict = { '-': operand1 - operand2,
-                      '+': operand1 + operand2,
-                      '*': operand1 * operand2, }
+        some_dict = {'-': operand1 - operand2,
+                     '+': operand1 + operand2,
+                     '*': operand1 * operand2,}
         print(f'Question: {calc}')
         answer = prompt.string('Your answer: ')
-        coorect = some_dict[random_operators]
-        if coorect != int(answer):
-            print(f'"{answer}" is wrong answer ;(. Correct answer was "{coorect}".')
+        crt = some_dict[random_operators]
+        if crt != int(answer):
+            print(f'"{answer}" is wrong answer ;(. Correct answer was "{crt}".')
             print(f'''Let's try again, {name}!''')
             break
         else:

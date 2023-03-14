@@ -17,9 +17,9 @@ def even_play():
         num = randint(BEGIN, END)
         print(f'Question: {num}')
         answer = prompt.string('Your answer: ')
-        coorect = dictval[num % 2 == 0]
-        if answer != coorect:
-            print(f'"{answer}" is wrong answer ;(. Correct answer was "{coorect}".')
+        crt = dictval[num % 2 == 0]
+        if crt != coorect:
+            print(f'"{answer}" is wrong answer ;(. Correct answer was "{crt}".')
             print(f'''Let's try again, {name}!''')
             break
         else:

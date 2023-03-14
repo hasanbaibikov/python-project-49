@@ -17,10 +17,10 @@ def gcd_play():
         divisor1 = randint(BEGIN, END)
         divisor2 = randint(BEGIN, END)
         print(f'Question: {divisor1} {divisor2}')
-        correct_answer = math.gcd(divisor1, divisor2)
+        crt = math.gcd(divisor1, divisor2)
         answer = prompt.string('Your answer: ')
-        if correct_answer != int(answer):
-            print(f'"{answer}" is wrong answer ;(. Correct answer was "{correct_answer}".')
+        if crt != int(answer):
+            print(f'"{answer}" is wrong answer ;(. Correct answer was "{crt}".')
             print(f'''Let's try again, {name}!''')
             break
         else:
