@@ -1,8 +1,9 @@
-import sympy
 import prompt
 import random
 
+
 dict = {True: 'yes', False: 'no'}
+
 
 def prime_play():
     print('Welcome to the Brain Games!')
@@ -13,8 +14,7 @@ def prime_play():
     while count < 3:
         num = random.randint(1, 100)
         print(f'Question: {num}')
-        correct_num = sympy.isprime(num)
-        correct_answer = dict[correct_num]
+        correct_answer = dict[is_prime(num)]
         answer = prompt.string('Your answer: ')
         if correct_answer != answer:
           print(f'''"{answer}" is wrong answer ;(. Correct answer was "{correct_answer}".\n Let's try again, {name}!''')
@@ -22,6 +22,13 @@ def prime_play():
         else:
           print('Correct!')
           count += 1
-
     if count == 3:
       print(f'Coungratilations, {name}!')
+
+def is_prime(x):
+    if x < 2:
+        return False
+    for i in range(2, int(x**0.5) + 1):
+        if x % i == 0:
+            return False
+    return True
