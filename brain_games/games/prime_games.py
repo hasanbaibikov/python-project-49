@@ -23,7 +23,7 @@ def prime_play():
           print('Correct!')
           count += 1
     if count == 3:
-      print(f'Coungratilations, {name}!')
+      print(f'Congratulations, {name}!')
 
 def is_prime(x):
     if x < 2:
