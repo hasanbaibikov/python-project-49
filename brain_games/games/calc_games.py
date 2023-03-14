@@ -20,7 +20,7 @@ def calc_play():
         calc = f'{operand1} {random_operators} {operand2}'
         some_dict = {'-': operand1 - operand2,
                      '+': operand1 + operand2,
-                     '*': operand1 * operand2,}
+                     '*': operand1 * operand2}
         print(f'Question: {calc}')
         answer = prompt.string('Your answer: ')
         crt = some_dict[random_operators]
