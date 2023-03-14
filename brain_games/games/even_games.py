@@ -18,7 +18,7 @@ def even_play():
         print(f'Question: {num}')
         answer = prompt.string('Your answer: ')
         crt = dictval[num % 2 == 0]
-        if crt != coorect:
+        if crt != answer:
             print(f'"{answer}" is wrong answer ;(. Correct answer was "{crt}".')
             print(f'''Let's try again, {name}!''')
             break
