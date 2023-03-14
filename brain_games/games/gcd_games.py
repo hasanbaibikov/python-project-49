@@ -20,7 +20,7 @@ def gcd_play():
         correct_answer = math.gcd(divisor1, divisor2)
         answer = prompt.string('Your answer: ')
         if correct_answer != int(answer):
-            print(f"{answer}" is wrong answer ;(. Correct answer was "{correct_answer}".') 
+            print(f'"{answer}" is wrong answer ;(. Correct answer was "{correct_answer}".')
             print(f'''Let's try again, {name}!''')
             break
         else:
