@@ -17,13 +17,15 @@ def prime_play():
         correct_answer = dict[is_prime(num)]
         answer = prompt.string('Your answer: ')
         if correct_answer != answer:
-          print(f'''"{answer}" is wrong answer ;(. Correct answer was "{correct_answer}".\n Let's try again, {name}!''')
-          break
+            print(f'"{answer}" is wrong answer ;(. Correct answer was "{correct_answer}".')
+            print(f'''Let's try again, {name}!''')
+            break
         else:
-          print('Correct!')
-          count += 1
+            print('Correct!')
+            count += 1
     if count == 3:
-      print(f'Congratulations, {name}!')
+        print(f'Congratulations, {name}!')
+
 
 def is_prime(x):
     if x < 2:

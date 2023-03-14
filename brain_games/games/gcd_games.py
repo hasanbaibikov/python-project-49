@@ -1,4 +1,4 @@
-import prompt 
+import prompt
 from random import randint
 import math
 
@@ -20,10 +20,11 @@ def gcd_play():
         correct_answer = math.gcd(divisor1, divisor2)
         answer = prompt.string('Your answer: ')
         if correct_answer != int(answer):
-            print(f'''"{answer}" is wrong answer ;(. Correct answer was "{correct_answer}".\n Let's try again, {name}!''')
+            print(f"{answer}" is wrong answer ;(. Correct answer was "{correct_answer}".') 
+            print(f'''Let's try again, {name}!''')
             break
         else:
             print('Correct!')
             count += 1
     if count == 3:
-      print(f'Congratulations, {name}!')
+        print(f'Congratulations, {name}!')

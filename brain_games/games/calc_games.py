@@ -18,19 +18,18 @@ def calc_play():
         operators = ['+', '-', '*']
         random_operators = choice(operators)
         calc = f'{operand1} {random_operators} {operand2}'
-        some_dict = {
-        '-': operand1 - operand2,
-        '+': operand1 + operand2,
-        '*': operand1 * operand2,
-   }
+        some_dict = { '-': operand1 - operand2,
+                      '+': operand1 + operand2,
+                      '*': operand1 * operand2, }
         print(f'Question: {calc}')
         answer = prompt.string('Your answer: ')
         coorect = some_dict[random_operators]
         if coorect != int(answer):
-          print(f'''"{answer}" is wrong answer ;(. Correct answer was "{coorect}".\n Let's try again, {name}!''')
-          break
+            print(f'"{answer}" is wrong answer ;(. Correct answer was "{coorect}".')
+            print(f'''Let's try again, {name}!''')
+            break
         else:
-          print('Coorect!')
-          count += 1
+            print('Coorect!')
+            count += 1
     if count == 3:
-      print(f'Congratulations, {name}!')
+        print(f'Congratulations, {name}!')

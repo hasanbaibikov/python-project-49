@@ -19,11 +19,11 @@ def even_play():
         answer = prompt.string('Your answer: ')
         coorect = dictval[num % 2 == 0]
         if answer != coorect:
-            print(f'''"{answer}" is wrong answer ;(. Correct answer was "{coorect}".\n Let's try again, {name}!''')
+            print(f'"{answer}" is wrong answer ;(. Correct answer was "{coorect}".')
+            print(f'''Let's try again, {name}!''')
             break
         else:
-          print('Correct')
-          count += 1
+            print('Correct')
+            count += 1
     if count == 3:
         print(f'Congratulations, {name}!')
-
