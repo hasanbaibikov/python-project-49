@@ -1,8 +1,7 @@
 #!/usr/bin/python3
+
+
 import prompt
-
-
-
 
 
 def run(game):
