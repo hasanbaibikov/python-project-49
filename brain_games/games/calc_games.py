@@ -23,6 +23,6 @@ def get_game():
     num1 = randint(MIN_NUMBER, MAX_NUMBER)
     num2 = randint(MIN_NUMBER, MAX_NUMBER)
     operator = choice(OPERATORS)
-    question = f'{num1} {operator} {num2}'
+    question = f'Question: {num1} {operator} {num2}'
     crt = calculate(num1, num2, operator)
     return question, str(crt)
