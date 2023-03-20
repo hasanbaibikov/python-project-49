@@ -9,8 +9,8 @@ def run(game):
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')
     print(game.GAME_MESSAGE)
-    count = 0
-    while count < 3:
+    tries = 3
+    while tries:
         question, crt = game.get_game()
         print(question)
         answer = prompt.string('Your answer: ')
@@ -20,5 +20,5 @@ def run(game):
             return
         else:
             print('Correct!')
-            count += 1
+            tries -= 1
     print(f'Congratulations, {name}!')
