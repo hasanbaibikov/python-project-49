@@ -1,35 +1,28 @@
-import prompt
 from random import randint, choice
 
 
-BEGIN = 1
-END = 10
+GAME_MESSAGE = 'What is the result of the expression?'
+MIN_NUMBER = 1
+MAX_NUMBER = 10
+OPERATORS = ['+', '-', '*']
 
 
-def calc_play():
-    print('Welcome to the Brain Games!')
-    name = prompt.string('May I have your name? ')
-    print(f'Hello, {name}!')
-    print('What is the result of the expression?')
-    count = 0
-    while count < 3:
-        operand1 = randint(BEGIN, END)
-        operand2 = randint(BEGIN, END)
-        operators = ['+', '-', '*']
-        random_operators = choice(operators)
-        calc = f'{operand1} {random_operators} {operand2}'
-        some_dict = {'-': operand1 - operand2,
-                     '+': operand1 + operand2,
-                     '*': operand1 * operand2}
-        print(f'Question: {calc}')
-        answer = prompt.string('Your answer: ')
-        crt = some_dict[random_operators]
-        if crt != int(answer):
-            print(f'"{answer}" is wrong answer ;(. Correct answer was "{crt}".')
-            print(f'''Let's try again, {name}!''')
-            break
-        else:
-            print('Coorect!')
-            count += 1
-    if count == 3:
-        print(f'Congratulations, {name}!')
+def calculate(num1, num2, operator):
+    if operator == '+':
+        crt = num1 + num2
+        return  crt
+    elif operator == '-':
+        crt = num1 - num2
+        return crt
+    else:
+        crt = num1 * num2
+        return crt
+
+
+def get_game():
+    num1 = randint(MIN_NUMBER, MAX_NUMBER)
+    num2 = randint(MIN_NUMBER, MAX_NUMBER)
+    operator = choice(OPERATORS)
+    question = f'{num1} {operator} {num2}'
+    crt = calculate(num1, num2, operator)
+    return question, str(crt)
