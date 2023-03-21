@@ -11,6 +11,15 @@ _____
 
 _______
 
+
+### ***Requirements***
+* [Python](https://www.python.org) - ^3.10
+
+* [Poetry](https://python-poetry.org) - ^1.3.1
+
+_______
+
+
 ### ***Installation***
 
 * Install current version with [GitHub](https://github.com/hasanbaibikov/python-project-49):
