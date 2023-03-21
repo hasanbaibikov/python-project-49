@@ -1,9 +1,12 @@
 #!/usr/bin/python3
-from brain_games.games.prime_games import prime_play
+
+
+from brain_games.games import prime_games
+from brain_games.brain_engine import run
 
 
 def main():
-    prime_play()
+    run(prime_games)
 
 
 if __name__ == '__main__':

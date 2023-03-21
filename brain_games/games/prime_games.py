@@ -1,32 +1,10 @@
-import prompt
-import random
+#!/usr/bin/env python3
 
 
-dict = {True: 'yes', False: 'no'}
+from random import randint
 
 
-def prime_play():
-    print('Welcome to the Brain Games!')
-    name = prompt.string('May I have your name? ')
-    print(f'Hello, {name}!')
-    print('Answer "yes" if given number is prime. Otherwise answer "no".')
-    count = 0
-    while count < 3:
-        num = random.randint(1, 100)
-        print(f'Question: {num}')
-        crt = dict[is_prime(num)]
-        answer = prompt.string('Your answer: ')
-        if crt != answer:
-            print(f'"{answer}" is wrong answer ;(. Correct answer was "{crt}".')
-            print(f'''Let's try again, {name}!''')
-            break
-        else:
-            print('Correct!')
-            count += 1
-    if count == 3:
-        print(f'Congratulations, {name}!')
-
-
+GAME_MESSAGE = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 def is_prime(x):
     if x < 2:
         return False
@@ -34,3 +12,13 @@ def is_prime(x):
         if x % i == 0:
             return False
     return True
+
+def get_game():
+    num = randint(1, 100)
+    question = f'Question: {num}'
+    crt = is_prime(num)
+    if crt == False:
+        crt = 'no'
+    else:
+        crt = 'yes'
+    return question, str(crt)
