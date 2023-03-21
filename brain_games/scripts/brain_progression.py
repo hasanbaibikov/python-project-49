@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
-from brain_games.games.progression_games import ar_progression_play
+
+
+from brain_games.games import progression_games
+from brain_games.brain_engine import run
 
 
 def main():
-    ar_progression_play()
+    run(progression_games)
 
 
 if __name__ == '__main__':

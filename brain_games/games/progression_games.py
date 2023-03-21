@@ -1,34 +1,24 @@
-import prompt
-import random
+from random import randint
 
 
-def ar_progression_play():
-    print('Welcome to the Brain Games!')
-    name = prompt.string('May I have your name? ')
-    print(f'Hello, {name}!')
-    print("What number is missing in the progression?")
-    count = 0
-    LEN = 10
-    while count < 3:
-        start = random.randint(1, 100)
-        step = random.randint(1, 5)
-        my_list = []
-        a = start
-        d = step
-        for i in range(0, LEN):
-            my_list.append(str(a + i * d))
-        rand_int = random.randint(0, LEN - 1)
-        crt = my_list[rand_int]
-        my_list[rand_int] = '..'
-        progression = ' '.join(my_list)
-        print(f'Question: {progression}')
-        answer = prompt.string('Your answer: ')
-        if crt != answer:
-            print(f'"{answer}" is wrong answer ;(. Correct answer was "{crt}".')
-            print(f'''Let's try again, {name}!''')
-            break
-        else:
-            print('Correct!')
-            count += 1
-    if count == 3:
-        print(f'Congratulations, {name}!')
+GAME_MESSAGE = 'What number is missing in the progression?'
+LEN = 10
+
+
+def create_prog():
+    prog = []
+    start = randint(1, 100)
+    step = randint(1, 5)
+    for i in range(0, LEN):
+        prog.append(str(start + i * step))
+    return prog
+
+
+def get_game():
+    progression = create_prog()
+    rand_index = randint(0, LEN - 1)
+    crt = progression[rand_index]
+    progression[rand_index] = '..'
+    str_progression = ' '.join(progression)
+    question = f'Question: {str_progression}'
+    return question, crt
