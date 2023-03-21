@@ -10,7 +10,7 @@ OPERATORS = ['+', '-', '*']
 def calculate(num1, num2, operator):
     if operator == '+':
         crt = num1 + num2
-        return  crt
+        return crt
     elif operator == '-':
         crt = num1 - num2
         return crt
