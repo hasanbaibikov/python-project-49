@@ -28,7 +28,7 @@ cd python-project-49
 ```python
 make build
 ```
-* And run it:
+* And install it:
 ```python
 make package-install
 ```
@@ -37,34 +37,50 @@ ______
 
 ## ***Games:***
 
-### 1.
+### 1. ***Brain_even***
+A game in which you need to answer the question, is a number even? If your answer does not turn out to be true, then the game will end and offer you to play again, and if you answered correctly three times in a row, then congratulations, you won!
 ```python
 brain-even
 ```
 [![asciicast](https://asciinema.org/a/sX9Re3DU1lbBWrnxSY5VFyn6f.svg)](https://asciinema.org/a/sX9Re3DU1lbBWrnxSY5VFyn6f)
 
-### 2.
+______
+
+### 2. ***Brain_calc***
+A game in which you will need to think over the simplest arithmetic expressions consisting of addition, subtraction and multiplication. If your answer is not correct, don't be discouraged, try again. To win you need to answer three questions in a row.
+
 ```python
 brain-calc
 ```
 
 [![asciicast](https://asciinema.org/a/hyrPqrWXU9NPpyE7i4ME6BAf9.svg)](https://asciinema.org/a/hyrPqrWXU9NPpyE7i4ME6BAf9)
 
-### 3.
+______
+
+### 3. ***Brain_gcd***
+A game that will require a lot of brain work, you will need to determine the greatest common divisor of two completely random numbers.
+Also, to win, you must answer correctly three times in a row.
+
 ```python
 brain-gcd
 ```
 
 [![asciicast](https://asciinema.org/a/0Nxmq1DLqUifp9FVqFZxe8wgJ.svg)](https://asciinema.org/a/0Nxmq1DLqUifp9FVqFZxe8wgJ)
 
-### 4.
+________
+
+### 4. ***Brain_progression***
+A game in which you need to apply your logical skills. You will need to determine which number is missing, in a specific arithmetic progression. The game still lasts up to three wins in a row.
 ```python
 brain-progression
 ```
 
 [![asciicast](https://asciinema.org/a/9ZZgGkNpCOK5t46yThz26cF6p.svg)](https://asciinema.org/a/9ZZgGkNpCOK5t46yThz26cF6p)
 
-### 5.
+_______
+
+### 5. ***Brain_prime***
+A game that will require elementary arithmetic knowledge. You will need to determine whether a completely random number is prime. The game lasts up to three wins in a row, and if your answer does not match the true one, do not worry, try again!
 ```python
 brain-prime
 ```
