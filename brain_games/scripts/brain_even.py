@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-
-
 from brain_games.games import even_games
 from brain_games.brain_engine import run
 

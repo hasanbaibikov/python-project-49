@@ -15,8 +15,8 @@ def run(game):
         print(question)
         answer = prompt.string('Your answer: ')
         if answer != crt:
-            print(f'"{answer}" is wrong answer ;(. Correct answer was "{crt}".'
-                  f'''Let's try again, {name}!''')
+            print(f'"{answer}" is wrong answer ;(. Correct answer was "{crt}".')
+            print(f'''Let's try again, {name}!''')
             return
         else:
             print('Correct!')
