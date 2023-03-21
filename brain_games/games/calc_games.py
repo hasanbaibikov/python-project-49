@@ -24,5 +24,5 @@ def get_game():
     num2 = randint(MIN_NUMBER, MAX_NUMBER)
     operator = choice(OPERATORS)
     question = f'Question: {num1} {operator} {num2}'
-    crt = calculate(num1, num2, operator)
+    crt = calc_expression(num1, num2, operator)
     return question, str(crt)
