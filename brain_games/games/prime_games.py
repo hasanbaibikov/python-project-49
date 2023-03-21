@@ -5,6 +5,8 @@ from random import randint
 
 
 GAME_MESSAGE = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+
+
 def is_prime(x):
     if x < 2:
         return False
@@ -13,11 +15,12 @@ def is_prime(x):
             return False
     return True
 
+
 def get_game():
     num = randint(1, 100)
     question = f'Question: {num}'
     crt = is_prime(num)
-    if crt == False:
+    if crt is False:
         crt = 'no'
     else:
         crt = 'yes'
