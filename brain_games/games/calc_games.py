@@ -7,7 +7,7 @@ MAX_NUMBER = 10
 OPERATORS = ['+', '-', '*']
 
 
-def calculate(num1, num2, operator):
+def calc_expression(num1, num2, operator):
     if operator == '+':
         crt = num1 + num2
         return crt
