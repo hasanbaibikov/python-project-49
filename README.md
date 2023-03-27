@@ -21,29 +21,55 @@ _______
 
 
 ### ***Installation***
+______
 
-* Install current version with [GitHub](https://github.com/hasanbaibikov/python-project-49):
+### 1. ***For developers:***
+
+* Install [Poetry](https://python-poetry.org) (if it is not already installed):
+
+```python
+pip install poetry
+```
+
+* Clone the repository with the project from [GitHub](https://github.com/hasanbaibikov/python-project-49):
 ```python
 git clone git@github.com:hasanbaibikov/python-project-49.git
 ```
 
-* Select root directory:
+* Change to the project directory:
 ```python
 cd python-project-49
 ```
 
+* Install dependencies from [pyproject.toml](https://github.com/hasanbaibikov/python-project-49/blob/main/pyproject.toml):
+```python
+poetry install --dev
+```
 
-* let's assemble the package:
+* Assemble the package:
 ```python
 make build
 ```
-* And install it:
+* Install the package:
 ```python
 make package-install
+```
+____
+
+### ***Running the linter***
+* To run the linter, you need to run the command:
+```python
+make lint
 ```
 
 ______
 
+### 2. ***For users:***
+* Install the package from the repository:
+```python3
+python3 -m pip install --user git+https://github.com/hasanbaibikov/python-project-49
+```
+_____
 ## ***Games:***
 
 ### 1. ***Brain_even***
